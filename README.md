@@ -111,6 +111,8 @@ _After a few seconds the model will have loaded and you will be able to start ch
 
 ## 2. Automated Installation 🚀
 
+> **Important:** To perform the automated installation, your phone must be rooted.
+
 To make the installation process simpler, I have created a script that automates all the steps. Follow these steps to download the script from GitHub and run it:
 
 ### 2.1. Install Git
@@ -137,7 +139,31 @@ Change to the directory where the script is located:
 cd deepseek-r1-locally-for-android
 ```
 
-### 2.4. Run the Installation Script
+### 2.4. Install tsu
+
+To use the `sudo` command, you need to install `tsu`:
+
+```bash
+pkg install tsu
+```
+
+### 2.5. Run the Installation Script
+
+Make the script executable and run it with `sudo`:
+
+```bash
+chmod +x install-deepseek.sh
+sudo ./install-deepseek.sh
+```
+
+The script will take care of:
+- Updating Termux.
+- Installing the necessary tools.
+- Configuring Arch Linux.
+- Installing and running Ollama.
+- Starting the Deepseek R1 model.
+
+This option is perfect if you prefer a quick and hassle-free installation. The script will perform the entire process automatically, maintaining the same functionality as the manual installation.
 
 Make the script executable and run it:
 
