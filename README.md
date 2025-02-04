@@ -14,7 +14,7 @@ Before starting with the installation, make sure you have Termux installed on yo
 
 My recommendation is that you download it from the F-Droid store, as a more advanced version can be accessed from the F-Droid store.
 
-## 1. Deepseek R1 installation steps on Android
+## 1. Deepseek R1 installation steps on Android 📱
 
 After installing Termux, you should follow the steps below to install Deepseek R1 on your Android device having full control of the whole process.
 
@@ -43,13 +43,22 @@ _Note that this is an optional step. So if you do not want to access your files 
 To improve the aesthetics and convenience of the environment. You can install neofetch and fish by running the following commands:
 
 ```bash
-pkg install neofetch
-pkg install fish
+pkg install neofetch fish
 ```
 
 _Neofetch is a tool that displays information about your system, while fish is an interactive shell that offers an enhanced user experience._
 
-### 1.4. Install Arch Linux on Adnroid
+### 1.4. Install Proot Distro
+
+Now we need to install Proot Distro on Termux. 
+
+```bash
+pkg install proot-distro
+```
+
+_Which is a tool that allows you to run Linux distributions on Android using Proot._
+
+### 1.5. Install Arch Linux on Adnroid
 
 Through this command proot will install a version optimized for your processing, run:
 
@@ -59,7 +68,7 @@ proot-distro install archlinux
 
 _ARM is a 32-bit and 64-bit processor architecture used in mobile devices such as smartphones and tablets._
 
-### 1.5. Logging into Arch Linux as root
+### 1.6. Logging into Arch Linux as root
 
 To log in as root to Arch Linux, use the following command:
 
@@ -69,7 +78,7 @@ proot-distro login archlinux
 
 _To install ollama and the artificial intelligence models on the mobile you need to be root._
 
-### 1.6. Upgrading Arch Linux packages
+### 1.7. Upgrading Arch Linux packages
 
 To make sure you have the latest versions of Arch Linux packages, run:
 
@@ -79,7 +88,7 @@ pacman -Syu
 
 _In this case we do not use “sudo” as we are already superuser._
 
-### 1.7. Installing Ollama on Arch Linux
+### 1.8. Installing Ollama on Arch Linux
 
 Ollama will be the means through which we will obtain the Deepseek R1 model image. So to install it, run:
 
@@ -89,7 +98,7 @@ curl -fsSL https://ollama.com/install.sh | sh
 
 _What is ollama? Ollama is an artificial intelligence model server that allows you to download and run AI models without an Internet connection._
 
-### 1.8. Starting the Ollama Server
+### 1.9. Starting the Ollama Server
 
 Now that you have installed ollama. You need to start your server, run:
 
@@ -99,7 +108,7 @@ ollama serve &
 
 _If you fail to start the server with this command. Try without the ampersand “&”._
 
-### 1.9. Installing and running Deepseek R1
+### 1.10. Installing and running Deepseek R1
 
 Finally, let's install and run the Deepseek R1 model with the following command:
 
@@ -192,7 +201,7 @@ proot-distro login archlinux
 
 2. Start the Ollama server:
 ```bash
-ollama server &
+ollama serve &
 ```
 
 3. Run the Deepseek R1 model

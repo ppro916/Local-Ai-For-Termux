@@ -14,8 +14,11 @@ pkg update -y
 # Install additional tools
 pkg install -y neofetch fish
 
+# Install proot-distro
+pkg install -y proot-distro
+
 # Install Arch Linux
-proot-distro install archlinux
+yes | proot-distro install archlinux
 
 # Enter Arch Linux and execute configuration
 proot-distro login archlinux << 'EOF'
@@ -26,7 +29,7 @@ pacman -Syu --noconfirm
 curl -fsSL https://ollama.com/install.sh | sh
 
 # Start Ollama server
-ollama server > /dev/null 2>&1 &
+ollama serve > /dev/null 2>&1 &
 
 # Wait for server to be ready
 while ! curl -s http://localhost:11434/api/version > /dev/null; do
