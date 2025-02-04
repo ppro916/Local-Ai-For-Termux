@@ -5,7 +5,7 @@
 # | Author: Miguel Euraque
 # | Date: 2025-01-30
 # | Description: Automated installation script for Deepseek R1 on Android
-# | Copyright: All rights reserved.
+# | Copyright: MIT License.
 # ===============================================
 
 # Update Termux
